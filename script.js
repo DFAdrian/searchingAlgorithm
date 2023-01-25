@@ -2,7 +2,6 @@ const btn = document.getElementById('btn');
 const list = document.querySelector('ul');
 let sortedArr = [];
 let tries = 0;
-let guessed = false;
 
 function createArray(arr){
     for(let i = 0;i<=1000;i++){
@@ -27,7 +26,6 @@ function guessNumber(){
                 tries++
                 list.innerHTML +=`<li>${midPoint} - Got it</li>`
                 list.innerHTML +=`<li>It took me ${tries} tries</li>`
-                guessed = true
             }else if(midPoint > guess){
                 tries++
                 max = midPoint
