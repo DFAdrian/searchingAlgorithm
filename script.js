@@ -10,14 +10,18 @@ function createArray(arr){
 }
 createArray(sortedArr)
 
+// Max and Min values
+
 let max = sortedArr[sortedArr.length-1];
 let min = sortedArr[0];
 
+//get midpoint value
 function getMid(){
     if(min>50)return Math.round(max-((max-min)/2))
     else return Math.floor(max-((max-min)/2))
 }
 
+//assign midpoint value
 let midPoint = getMid();
 
 function guessNumber(){
@@ -37,7 +41,8 @@ function guessNumber(){
             }
             midPoint = getMid()
         }      
-        
+
+//event
 btn.addEventListener('click',guessNumber)
 
 
