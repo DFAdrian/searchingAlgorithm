@@ -25,7 +25,7 @@ function getMid(){
 let midPoint = getMid();
 
 function guessNumber(){
-    btn.textContent = 'Click it again'
+    btn.value = 'Click it again'
     let guess = parseInt(document.getElementById('guess').value);
             if(midPoint == guess){
                 tries++
