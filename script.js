@@ -25,7 +25,6 @@ function getMid(){
 let midPoint = getMid();
 
 function guessNumber(){
-    btn.value = 'Click it again'
     let guess = parseInt(document.getElementById('guess').value);
             if(midPoint == guess){
                 tries++
@@ -45,6 +44,9 @@ function guessNumber(){
         }      
 
 //event
-btn.addEventListener('click',guessNumber)
+btn.addEventListener('click',()=>{
+    guessNumber()
+    btn.value ='Click it again'
+})
 
 
